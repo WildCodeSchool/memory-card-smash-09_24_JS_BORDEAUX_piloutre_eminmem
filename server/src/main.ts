@@ -9,6 +9,59 @@ import "../database/checkConnection";
 // Import the Express application from ./app
 import app from "./app";
 
+const teamMembers = [
+	{
+		name: {
+			first: "Marwane",
+			last: "Ben Khalifa",
+			paragraph:
+				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+		},
+		linkedin: "mettre lien lkdin",
+		picture: {
+			medium: "/images/Marwane.png",
+		},
+	},
+	{
+		name: {
+			first: "Pierre",
+			last: "De Castelbajac",
+			paragraph:
+				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+		},
+		linkedin: "lien Lkdin",
+		picture: {
+			medium: "/images/Pierre.png",
+		},
+	},
+	{
+		name: {
+			first: "Thomas",
+			last: "Lemallier",
+			paragraph:
+				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+		},
+		linkedin: "lien Lkdin",
+		picture: {
+			medium: "/images/Thomas.png",
+		},
+	},
+	{
+		name: {
+			first: "Nicolas",
+			last: "Chiche",
+			paragraph:
+				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+		},
+		linkedin: "lien Lkdin",
+		picture: {
+			medium: "/images/Nico.png",
+		},
+	},
+];
+app.get("/api/teamMembers",(req, res, next) => {
+  res.json(teamMembers)
+})
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 
