@@ -1,0 +1,34 @@
+section {
+  padding: 5rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+h2,
+h3 {
+  text-align: center;
+  font-family: "Bangers", Courier, monospace;
+  font-size: 3rem;
+}
+
+button {
+  background-color: #fff;
+  color: #e60013;
+  border-color: #e60013;
+  width: 250px;
+  height: 100px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.7s ease;
+}
+
+button:hover {
+  background-color: #e60013;
+  color: #fff;
+  border-color: black;
+}
