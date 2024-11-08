@@ -1,7 +1,7 @@
 :root {
   --primary-color: #e60013;
   --colortext: #ffffff;
-  --font-primary-text:'Barlow',Courier, monospace;
+  --font-primary-text: "Barlow", Courier, monospace;
 }
 
 * {
@@ -25,4 +25,5 @@ h1 {
 footer {
   background-color: var(--primary-color);
   color: var(--colortext);
+  padding: 3rem;
 }
