@@ -1,6 +1,6 @@
+import { Footer } from "./footer";
 import { Main } from "./main";
 import { NavBar } from "./navbar";
-import { Footer } from "./footer";
 export function HomePage() {
   return (
     <>
