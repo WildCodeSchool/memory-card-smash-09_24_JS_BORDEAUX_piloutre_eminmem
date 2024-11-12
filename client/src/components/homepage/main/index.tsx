@@ -1,5 +1,5 @@
 import "./index.css";
-
+import { Link } from "react-router-dom";
 export function Main() {
   return (
     <main>
@@ -15,8 +15,12 @@ export function Main() {
 
       <section>
         <h2> Title </h2>
-        <button type="button"> Click me </button>
-        <button type="button"> Click me</button>
+        <Link to="/GamePage">
+          <button type="button">Start</button>
+        </Link>
+        <Link to="/">
+          <button type="button">Difficulty</button>
+        </Link>
       </section>
     </main>
   );
