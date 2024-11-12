@@ -4,10 +4,6 @@ import express from "express";
 
 const app = express();
 
-
-
-// Configure Express pour servir les images dans client/images
-app.use('/images', express.static(path.join(__dirname,  'images')));
 // Configure it
 
 /* ************************************************************************* */

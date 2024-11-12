@@ -7,6 +7,7 @@ type TeamMember = {
     last: string;
     paragraph: string;
   };
+  id: number;
   linkedin: string;
   picture: {
     medium: string;
@@ -18,30 +19,30 @@ export default function About() {
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/teamMembers`)
-    .then((response) => response.json())
-    .then((data) => setTeamMembers(data))
-    .catch((error) =>
-      console.error("Erreur lors de la récupération des données :", error),
-  );
-}, []);
+      .then((response) => response.json())
+      .then((data) => setTeamMembers(data))
+      .catch((error) =>
+        console.error("Erreur lors de la récupération des données :", error),
+      );
+  }, []);
 
   return (
     <>
       <header>
-        <a href="#">
+        <a href="/">
           <img src="images/logo-img.png" alt="logo" />
         </a>
         <nav>
-          <a href="#">Score</a>
-          <a href="#">Description</a>
+          <a href="/">Score</a>
+          <a href="/">Description</a>
         </nav>
       </header>
       <main>
         {teamMembers.length > 0 ? (
-          teamMembers.map((member, index) => (
+          teamMembers.map((member, i) => (
             <article
-              key={index}
-              className={`team-member ${index % 2 === 0 ? "left" : "right"}`}
+              key={member.id}
+              className={`team-member ${i % 2 === 0 ? "left" : "right"}`}
             >
               <img
                 src={
@@ -50,7 +51,6 @@ export default function About() {
                     : `${import.meta.env.VITE_API_URL}${member.picture.medium}`
                 }
                 alt={`${member.name.first} ${member.name.last}`}
-                
               />
               <section className="text-container">
                 <h2>
@@ -67,7 +67,7 @@ export default function About() {
       </main>
       <footer>
         <p>© Smash-Cards</p>
-        <a href="#">Retour en haut de page</a>
+        <a href="/">Retour en haut de page</a>
       </footer>
     </>
   );
