@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export function NavBar() {
@@ -6,19 +7,21 @@ export function NavBar() {
       <nav>
         <ul>
           <li>
-            <a href="i">
-              <img src="./src/assets/images/logo-smash.png" alt="" />
-            </a>
+            <Link to="/homepage">
+              <img src="./public/logo-smash.png" alt="" />
+            </Link>
           </li>
           <h1>Smash Cards</h1>
           <li>
-            <a href="i">Score</a>
+            <Link to="/scorepage">
+            Score
+            </Link>
           </li>
           <li>
-            <a href="i">Description</a>
+            <a href="description">Description</a>
           </li>
           <li>
-            <a href="i">A propos</a>
+            <a href="about">A propos</a>
           </li>
         </ul>
       </nav>

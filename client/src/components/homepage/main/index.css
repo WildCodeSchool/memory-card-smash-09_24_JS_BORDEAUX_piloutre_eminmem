@@ -1,10 +1,12 @@
-section {
-  padding: 5rem;
+.rules {
+  padding: 3rem;
   text-align: center;
 }
 
 p {
   text-align: center;
+  line-height: 3rem;
+  font-size: 1.1rem;
 }
 
 h2,
@@ -12,6 +14,13 @@ h3 {
   text-align: center;
   font-family: "Bangers", Courier, monospace;
   font-size: 3rem;
+}
+
+.listrules {
+  font-size: 1.1rem;
+  text-align: left;
+  width: 58rem;
+  margin: auto;
 }
 
 button {
@@ -25,10 +34,15 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.7s ease;
+  margin: 1rem;
 }
 
 button:hover {
   background-color: #e60013;
   color: #fff;
   border-color: black;
+}
+
+.button {
+  text-align: center;
 }
