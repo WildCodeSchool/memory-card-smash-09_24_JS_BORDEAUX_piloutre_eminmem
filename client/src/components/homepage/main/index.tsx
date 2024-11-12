@@ -32,7 +32,9 @@ export function Main() {
 
       <section className="button">
         <h2> Let's play </h2>
-        <Link to="/scorepage"><button type="button"> Choisissez une difficulté ! </button></Link>
+        <Link to="/scorepage">
+          <button type="button"> Choisissez une difficulté ! </button>
+        </Link>
         <button type="button"> Start the game ! </button>
       </section>
     </main>

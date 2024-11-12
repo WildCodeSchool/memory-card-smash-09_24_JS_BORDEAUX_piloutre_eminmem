@@ -13,9 +13,7 @@ export function NavBar() {
           </li>
           <h1>Smash Cards</h1>
           <li>
-            <Link to="/scorepage">
-            Score
-            </Link>
+            <Link to="/scorepage">Score</Link>
           </li>
           <li>
             <a href="description">Description</a>
