@@ -6,8 +6,8 @@ export function ScorePage() {
   return (
     <>
       <NavBar />
-      <Board/>
-      <Footer/>
+      <Board />
+      <Footer />
     </>
   );
 }
