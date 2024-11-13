@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
+import About from "./A-propos/About";
 // Import the main app component
 import App from "./App";
 import { ScorePage } from "./components/scorepage/scoreboard";
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: "/scorepage",
     element: <ScorePage />,
+  },
+  {
+    path: "/About",
+    element: <About />,
   }, // Try adding a new route! For example, "/about" with an About component
 ]);
 
