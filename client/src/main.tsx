@@ -5,10 +5,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
+import About from "./A-propos/About";
 // Import the main app component
 import App from "./App";
 import { ScorePage } from "./components/scorepage/scoreboard";
-import About from "./A-propos/About";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
