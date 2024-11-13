@@ -1,27 +1,28 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export function NavBar() {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className="link">
           <li>
-            <a href="i">
-              <img src="./src/assets/images/logo-smash.png" alt="" />
-            </a>
-          </li>
-          <h1>Smash Cards</h1>
-          <li>
-            <a href="i">Score</a>
+            <Link to="/">
+              <img src="./public/logo-smash.png" alt="accueil" />
+            </Link>
           </li>
           <li>
-            <a href="i">Description</a>
+            <Link to="/scorepage">Score</Link>
           </li>
           <li>
-            <a href="i">A propos</a>
+            <Link to="/description">Description</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>
+      <h1>Smash Cards</h1>
     </header>
   );
 }
