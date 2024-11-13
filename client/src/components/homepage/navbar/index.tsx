@@ -7,7 +7,7 @@ export function NavBar() {
       <nav>
         <ul>
           <li>
-            <Link to="/homepage">
+            <Link to="/">
               <img src="./public/logo-smash.png" alt="" />
             </Link>
           </li>

@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #e60013;
+  --second-color: rgb(0, 0, 0);
+  --colortext: #fefefefe;
+  --font-primary-text: "Barlow", Courier, monospace;
+  --font-title: "Bangers", Courier, monospace;
+}
+
 .rules {
   padding: 3rem;
   text-align: center;
@@ -9,40 +17,55 @@ p {
   font-size: 1.1rem;
 }
 
-h2,
-h3 {
-  text-align: center;
-  font-family: "Bangers", Courier, monospace;
-  font-size: 3rem;
-}
-
 .listrules {
   font-size: 1.1rem;
   text-align: left;
-  width: 58rem;
+  width: 34%;
   margin: auto;
 }
 
 button {
-  background-color: #fff;
-  color: #e60013;
-  border-color: #e60013;
-  width: 250px;
-  height: 100px;
-  padding: 12px 20px;
-  border-radius: 8px;
+  background-color: var(--colortext);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  width: 15.6rem;
+  height: 6.25rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.7s ease;
+  transition: 0.7s ease;
   margin: 1rem;
 }
 
 button:hover {
-  background-color: #e60013;
-  color: #fff;
-  border-color: black;
+  background-color: var(--primary-color);
+  color: var(--colortext);
+  border-color: var(--second-color);
 }
 
 .button {
   text-align: center;
+}
+
+.falsebutton {
+  background-color: var(--colortext);
+  color: var(--primary-color);
+  border: 0.15rem solid;
+  border-color: var(--primary-color);
+  width: 15.6rem;
+  padding: 2.39rem 4.4rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.7s ease;
+  margin: 1rem;
+  font-family: var(--font-primary-text);
+  letter-spacing: 0;
+}
+
+.falsebutton:hover {
+  background-color: var(--primary-color);
+  color: var(--colortext);
+  border-color: var(--second-color);
 }
