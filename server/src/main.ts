@@ -327,7 +327,7 @@ const smashArray = [
   {
     image: "/assets/images/Corrin.jpg",
     name: "Corrin",
-    order: "47",
+    order: "46",
     description:
       "Corrin est un personnage de l'Univers Fire Emblem. Il est le personnage principal du jeu Fire Emblem: Fates et l'avatar jouable de ce jeu.    ",
   },

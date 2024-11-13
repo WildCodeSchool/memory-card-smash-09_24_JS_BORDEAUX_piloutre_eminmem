@@ -1,4 +1,5 @@
 import { cloneElement, useEffect, useState } from "react";
+import "./Card.css";
 interface ImageCard {
   image: string;
   name: string;
@@ -12,12 +13,11 @@ export default function SmashCards() {
         imageCard.map((char) => (
           <figure key={char.order}>
             <img
+              className="card"
               src={`${import.meta.env.VITE_API_URL}${char.image}`}
               alt={`${char.name}`}
             />
-            <section className="text-container">
-              <figcaption>{char.name}</figcaption>
-            </section>
+            <figcaption>{char.name}</figcaption>
           </figure>
         ))
       ) : (
