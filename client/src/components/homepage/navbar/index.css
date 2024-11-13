@@ -1,40 +1,49 @@
+:root {
+  --primary-color: #e60013;
+  --second-color: #000000;
+  --colortext: #fefefefe;
+  --font-primary-text: "Barlow", Courier, monospace;
+  --font-title: "Bangers", Courier, monospace;
+  --letter-spacing: 0.2rem;
+}
+
 nav {
-  padding: 4rem;
+  padding-top: 1rem;
 }
 
 h1 {
-  color: #fff;
-  font-family: "Bangers", Courier, monospace;
+  color: var(--colortext);
+  font-family: var(--font-title);
   font-size: 4rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  letter-spacing: var(--letter-spacing);
 }
 
-h1:hover {
-  color: rgb(0, 0, 0);
-}
-
-ul {
+.link {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style-type: none;
   align-items: center;
 }
 
 img {
-  height: 130px;
-  width: 130px;
+  height: 8.12rem;
+  width: 8.12rem;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
-  font-family: "Bangers", Courier, monospace;
+  color: var(--colortext);
+  font-family: var(--font-title);
   font-size: 2rem;
+  letter-spacing: var(--letter-spacing);
 }
 
 a:hover {
-  color: rgb(0, 0, 0);
+  color: var(--second-color);
 }
 
 header {
-  background-color: #e60013;
+  background-color: var(--primary-color);
 }

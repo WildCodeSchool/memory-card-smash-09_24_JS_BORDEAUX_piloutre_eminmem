@@ -5,9 +5,14 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 /* ************************************************************************* */
 
+import About from "./A-propos/About";
 // Import the main app component
 import App from "./App";
+
 import GamePage from "./components/Game-Page/Game-Page";
+
+import { ScorePage } from "./components/scorepage/scoreboard";
+
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
@@ -24,10 +29,20 @@ const router = createBrowserRouter([
     element: <App />, // Renders the App component for the home page
   },
   {
+
     path: "/GamePage",
     element: <GamePage />,
   },
   // Try adding a new route! For example, "/about" with an About component
+
+    path: "/scorepage",
+    element: <ScorePage />,
+  },
+  {
+    path: "/About",
+    element: <About />,
+  }, // Try adding a new route! For example, "/about" with an About component
+
 ]);
 
 /* ************************************************************************* */
