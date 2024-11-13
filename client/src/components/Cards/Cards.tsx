@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { cloneElement, useEffect, useState } from "react";
 interface ImageCard {
   image: string;
   name: string;
@@ -6,6 +6,25 @@ interface ImageCard {
 }
 export default function SmashCards() {
   const [imageCard, setImageCard] = useState<ImageCard[]>([]);
+  const duplicate = cloneElement(
+    <main>
+      {imageCard.length > 0 ? (
+        imageCard.map((char) => (
+          <figure key={char.order}>
+            <img
+              src={`${import.meta.env.VITE_API_URL}${char.image}`}
+              alt={`${char.name}`}
+            />
+            <section className="text-container">
+              <figcaption>{char.name}</figcaption>
+            </section>
+          </figure>
+        ))
+      ) : (
+        <p>Chargement des membres de l'équipe...</p>
+      )}
+    </main>,
+  );
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/smashArray`)
@@ -16,25 +35,5 @@ export default function SmashCards() {
       );
   }, []);
 
-  return (
-    <>
-      <main>
-        {imageCard.length > 0 ? (
-          imageCard.map((char) => (
-            <article key={char.order}>
-              <img
-                src={`${import.meta.env.VITE_API_URL}${char.image}`}
-                alt={`${char.name}`}
-              />
-              <section className="text-container">
-                <h2>{char.name}</h2>
-              </section>
-            </article>
-          ))
-        ) : (
-          <p>Chargement des membres de l'équipe...</p>
-        )}
-      </main>
-    </>
-  );
+  return <>{[0, 1].map((index) => cloneElement(duplicate, { key: index }))}</>;
 }
