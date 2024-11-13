@@ -9,6 +9,21 @@ import "../database/checkConnection";
 // Import the Express application from ./app
 import app from "./app";
 
+const smashArray = [
+  {
+    image: "/assets/images/Mario.png",
+    name: "Mario",
+    order: "1",
+  },
+  {
+    image: "/assets/images/Donkey-kong.png",
+    name: "Donkey-Kong",
+    order: "2",
+  },
+];
+app.get("/api/smashArray", (req, res, next) => {
+  res.json(smashArray);
+});
 // Get the port from the environment variables
 const port = process.env.APP_PORT;
 
