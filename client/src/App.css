@@ -1,0 +1,41 @@
+:root {
+  --primary-color: #e60013;
+  --second-color: rgb(0, 0, 0);
+  --colortext: #fefefefe;
+  --font-primary-text: "Barlow", Courier, monospace;
+  --font-title: "Bangers", Courier, monospace;
+  --letter-spacing: 0.2rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: var(--font-primary-text);
+}
+
+button {
+  font-family: var(--font-primary-text);
+}
+
+h1 {
+  color: var(--colortext);
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 3rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--colortext);
+  padding: 3rem;
+}
+

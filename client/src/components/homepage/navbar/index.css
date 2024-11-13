@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #e60013;
+  --second-color: #000000;
+  --colortext: #fefefefe;
+  --font-primary-text: "Barlow", Courier, monospace;
+  --font-title: "Bangers", Courier, monospace;
+  --letter-spacing: 0.2rem;
+}
+
+nav {
+  padding-top: 1rem;
+}
+
+h1 {
+  color: var(--colortext);
+  font-family: var(--font-title);
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+.link {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  align-items: center;
+}
+
+img {
+  height: 8.12rem;
+  width: 8.12rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colortext);
+  font-family: var(--font-title);
+  font-size: 2rem;
+  letter-spacing: var(--letter-spacing);
+}
+
+a:hover {
+  color: var(--second-color);
+}
+
+header {
+  background-color: var(--primary-color);
+}
