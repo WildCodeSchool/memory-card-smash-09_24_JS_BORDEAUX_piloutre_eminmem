@@ -234,7 +234,7 @@ const smashArray = [
       "Pichu est une créature de l'Univers Pokémon. Il apparaît dans Super Smash Bros. Melee mais ne retourne pas dans les jeux suivants. Pichu est une pré-évolution de Pikachu, introduit avec la deuxième génération.   ",
   },
   {
-    image: "/assets/images/DresseurDePokémon.jpg",
+    image: "/assets/images/DresseurDePokemon.jpg",
     name: "Dresseur de Pokémon",
     order: "33",
     description:
@@ -255,7 +255,7 @@ const smashArray = [
       "Amphinobi est une créature de l'Univers Pokémon. Amphinobi, appelé le Pokémon Ninja, est un Pokémon de type Eau et Ténèbres introduit dans Pokémon X et Y. Il est l'évolution finale de Grenousse, le Pokémon de départ de type Eau à Kalos.    ",
   },
   {
-    image: "/assets/images/Félinferno.jpg",
+    image: "/assets/images/Felinferno.jpg",
     name: "Félinferno",
     order: "36",
     description:
@@ -367,7 +367,7 @@ const smashArray = [
       "Paluténa est une protagoniste de l'Univers Kid Icarus. Palutena est une déesse qui possède de longs cheveux verts ainsi que des yeux verts aussi. Elle est vêtue d'une robe blanche ainsi que de plusieurs accessoires couleur or.    ",
   },
   {
-    image: "/assets/images/PitMaléfique.jpg",
+    image: "/assets/images/PitMalefique.jpg",
     name: "Pit Maléfique",
     order: "52",
     description:
@@ -395,7 +395,7 @@ const smashArray = [
       "Marie est un personnage de l'Univers Animal Crossing. Marie a fait sa première apparition dans Animal Crossing: New Leaf. Elle est l'assistante du maire et l'aide à réaliser ses projets, elle pourra aussi lui en proposer, elle gère également les problèmes de voisinage, ainsi que le changement de l'hymne et du drapeau du village. Elle peut aussi faire l'évaluation de la ville.      ",
   },
   {
-    image: "/assets/images/EntraîneuseWiiFit.jpg",
+    image: "/assets/images/EntraineuseWiiFit.jpg",
     name: "Entraineuse Wii Fit",
     order: "56",
     description:
