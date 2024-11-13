@@ -5,24 +5,24 @@ export function NavBar() {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className="link">
           <li>
             <Link to="/">
-              <img src="./public/logo-smash.png" alt="" />
+              <img src="./public/logo-smash.png" alt="accueil" />
             </Link>
           </li>
-          <h1>Smash Cards</h1>
           <li>
             <Link to="/scorepage">Score</Link>
           </li>
           <li>
-            <a href="description">Description</a>
+            <Link to="/description">Description</Link>
           </li>
           <li>
-            <a href="about">A propos</a>
+            <Link to="/about">About</Link>
           </li>
         </ul>
       </nav>
+      <h1>Smash Cards</h1>
     </header>
   );
 }

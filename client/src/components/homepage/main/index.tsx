@@ -12,19 +12,17 @@ export function Main() {
           rapidement possible.
         </p>
         <p>Voici les règles pour jouer :</p>
-        <li className="listrules">
-          Retourne les cartes une par une pour découvrir leur image.
-        </li>
-        <li className="listrules">
-          Trouve les paires identiques en mémorisant les emplacements des
-          cartes.
-        </li>
-        <li className="listrules">
-          Dès que tu retrouves deux cartes identiques, elles restent visibles.
-        </li>
-        <li className="listrules">
-          Continue jusqu'à ce que toutes les paires soient découvertes.
-        </li>
+        <ul className="listrules">
+          <li>Retourne les cartes une par une pour découvrir leur image.</li>
+          <li>
+            Trouve les paires identiques en mémorisant les emplacements des
+            cartes.
+          </li>
+          <li>
+            Dès que tu retrouves deux cartes identiques, elles restent visibles.
+          </li>
+          <li>Continue jusqu'à ce que toutes les paires soient découvertes.</li>
+        </ul>
         <p>Fais de ton mieux pour terminer la partie en un minimum de temps.</p>
         <p>
           À toi de jouer et de montrer ta mémoire et ta rapidité ! Bonne chance

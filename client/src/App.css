@@ -4,6 +4,7 @@
   --colortext: #fefefefe;
   --font-primary-text: "Barlow", Courier, monospace;
   --font-title: "Bangers", Courier, monospace;
+  --letter-spacing: 0.2rem;
 }
 
 * {
@@ -29,7 +30,7 @@ h2 {
   text-align: center;
   font-family: var(--font-title);
   font-size: 3rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: var(--letter-spacing);
 }
 
 footer {
