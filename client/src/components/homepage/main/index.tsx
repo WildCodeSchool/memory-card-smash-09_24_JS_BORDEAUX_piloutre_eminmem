@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import "./index.css";
-
+import { Link } from "react-router-dom";
 export function Main() {
   return (
     <main>
@@ -33,7 +32,7 @@ export function Main() {
       <section className="button">
         <h2> Let's play </h2>
         <button type="button"> Choisissez une difficulté !</button>
-        <Link className="falsebutton" to="/scorepage">
+        <Link className="falsebutton" to="/GamePage">
           Start the game !
         </Link>
       </section>

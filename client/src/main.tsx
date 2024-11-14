@@ -8,6 +8,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import About from "./A-propos/About";
 // Import the main app component
 import App from "./App";
+import GamePage from "./components/Game-Page/Game-Page";
 import { ScorePage } from "./components/scorepage/scoreboard";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
+  },
+  {
+    path: "/GamePage",
+    element: <GamePage />,
   },
   {
     path: "/scorepage",
