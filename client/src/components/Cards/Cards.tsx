@@ -8,12 +8,11 @@ interface ImageCard {
 export default function SmashCards() {
   const [imageCard, setImageCard] = useState<ImageCard[]>([]);
   const duplicate = cloneElement(
-    <main>
+    <main className="gridcard">
       {imageCard.length > 0 ? (
         imageCard.map((char) => (
-          <figure key={char.order}>
+          <figure className="card" key={char.order}>
             <img
-              className="card"
               src={`${import.meta.env.VITE_API_URL}${char.image}`}
               alt={`${char.name}`}
             />
@@ -27,7 +26,7 @@ export default function SmashCards() {
   );
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/smashArray`)
+    fetch(`${import.meta.env.VITE_API_URL}api/smashArray`)
       .then((response) => response.json())
       .then((data) => setImageCard(data))
       .catch((error) =>

@@ -556,13 +556,6 @@ const smashArray = [
     description:
       "Cloud Strife est le personnage principal du jeu Final Fantasy VII, ainsi que le personnage le plus connu de l'Univers Final Fantasy. Il apparait pour la première fois dans Smash 4 comme un personnage téléchargeable. Il apparait également dans la série Kingdom Hearts. Cloud est né au village de Nibelheim, bouc émissaire des habitants qui n'hésitent pas à lui faire endosser la responsabilité de divers incidents et à lui faire subir des brimades, il décide à quatorze ans de s'engager dans le prestigieux corps d'élite de la ShinRa, le SOLDAT, ",
   },
-  {
-    image: "/assets/images/BanjoKazooie.jpg",
-    name: "Banjo & Kazooie",
-    order: "71",
-    description:
-      "Banjo & Kazooie sont les protagonistes de la série Banjo-Kazooie produite par Rare.Pour Banjo uniquement, il apparait pour la première fois dans Diddy Kong Racing où il devait aider Diddy Kong et ses amis à combattre le sorcier Wizpig qui sème la pagaille dans l'habitat de Timber.   ",
-  },
 ];
 app.get("/api/smashArray", (req, res, next) => {
   res.json(smashArray);
