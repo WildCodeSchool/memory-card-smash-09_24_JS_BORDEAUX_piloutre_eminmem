@@ -1,12 +1,15 @@
 import { cloneElement, useEffect, useState } from "react";
 import "./Card.css";
+
 interface ImageCard {
   image: string;
   name: string;
   order: string;
 }
+
 export default function SmashCards() {
   const [imageCard, setImageCard] = useState<ImageCard[]>([]);
+
   const duplicate = cloneElement(
     <main className="gridcard">
       {imageCard.length > 0 ? (
