@@ -5,7 +5,9 @@
   gap: 5px;
   margin: 0;
 }
-
+figcaption {
+  font-weight: bold;
+}
 .card {
   width: 20rem;
   padding: 1rem;
@@ -14,18 +16,25 @@
   color: #000000;
   font-size: 1.6rem;
   height: 27rem;
-  font-weight: bold;
   text-align: center;
   border: solid 2px black;
   box-shadow: -9px -1px 0px 1px #636262;
   margin: 3rem;
   opacity: 1;
-  transition: filter 0.7s;
+  cursor: pointer;
 }
-.card:hover {
-  filter: brightness(50%);
+.card h3 {
+  font-size: 2rem;
+  font-style: bold;
+  margin: 1rem;
 }
-
+.card p {
+  font-size: 1.4rem;
+}
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
+}
 figcaption {
   padding-top: 1.5rem;
   font-size: 2.25rem;
