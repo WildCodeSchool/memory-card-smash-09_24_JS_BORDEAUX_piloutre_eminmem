@@ -1,5 +1,7 @@
 import "./About.css";
 import { useEffect, useState } from "react";
+import { Footer } from "../components/homepage/footer";
+import { NavBar } from "../components/homepage/navbar";
 
 type TeamMember = {
   name: {
@@ -18,7 +20,7 @@ export default function About() {
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/teamMembers`)
+    fetch(`${import.meta.env.VITE_API_URL}api/teamMembers`)
       .then((response) => response.json())
       .then((data) => setTeamMembers(data))
       .catch((error) =>
@@ -28,15 +30,7 @@ export default function About() {
 
   return (
     <>
-      <header>
-        <a href="/">
-          <img src="images/logo-img.png" alt="logo" />
-        </a>
-        <nav>
-          <a href="/">Score</a>
-          <a href="/">Description</a>
-        </nav>
-      </header>
+      <NavBar />
       <main>
         {teamMembers.length > 0 ? (
           teamMembers.map((member, i) => (
@@ -65,10 +59,7 @@ export default function About() {
           <p>Chargement des membres de l'équipe...</p>
         )}
       </main>
-      <footer>
-        <p>© Smash-Cards</p>
-        <a href="/">Retour en haut de page</a>
-      </footer>
+      <Footer />
     </>
   );
 }

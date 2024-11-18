@@ -5,19 +5,19 @@ export function NavBar() {
   return (
     <header>
       <nav>
-        <ul className="link">
-          <li>
+        <ul className="links">
+          <li className="link">
             <Link to="/">
               <img src="./public/logo-smash.png" alt="accueil" />
             </Link>
           </li>
-          <li>
+          <li className="link">
             <Link to="/scorepage">Score</Link>
           </li>
-          <li>
+          <li className="link">
             <Link to="/description">Description</Link>
           </li>
-          <li>
+          <li className="link">
             <Link to="/About">About</Link>
           </li>
         </ul>

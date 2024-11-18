@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  gap: 5px;
   margin: 0;
 }
 figcaption {
@@ -45,7 +44,7 @@ figcaption {
   height: 18rem;
   margin-bottom: 0.5rem;
   background-color: #cbaeae;
-  box-shadow: inset 2px 2px 20px 4px rgb(0, 0, 0);
+  box-shadow: inset 2px 2px 20px 4px #000000;
   border-radius: inherit;
 }
 .carte.open {
@@ -60,4 +59,40 @@ figcaption {
 .carte.unmatched {
   background: #d015b4;
   cursor: default;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gridcard {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 1.25rem;
+  }
+
+  .card img {
+    width: 10rem;
+    height: 12rem;
+  }
+
+  .card {
+    width: 15rem;
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gridcard {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  .card img {
+    width: 10rem;
+    height: 12rem;
+  }
+
+  .card {
+    width: 15rem;
+    height: 20rem;
+  }
 }
