@@ -1,0 +1,110 @@
+:root {
+  --size-spacing: 1.25rem;
+  --white-color: #f3efef;
+  --black-color: #0e0e0e;
+  --font-primary-text: "Barlow", Courier, monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.25rem;
+}
+
+main {
+  margin: var(--size-spacing);
+  font-family: var(--font-primary-text);
+}
+img {
+  height: 3.75rem;
+  width: 3.75rem;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin: var(--size-spacing) 0;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.team-member.left {
+  flex-direction: row;
+}
+
+.team-member.right {
+  flex-direction: row-reverse;
+}
+.team-member.left p {
+  text-align: right;
+}
+
+.team-member.right p {
+  text-align: left;
+}
+
+.team-member img {
+  width: 21rem;
+  height: 8.125rem;
+  border-radius: 0.625rem;
+  box-shadow: 2px 2px 2px 2px #0e0e0e;
+  margin: 0 var(--size-spacing);
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 37.5rem;
+}
+
+.text-container h2 {
+  margin: 0;
+  font-size: var(--size-spacing);
+}
+
+.text-container p {
+  margin: 0.3125rem 0 0;
+}
+
+@media (max-width: 450px) {
+  main {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.625rem;
+    margin: 0.625rem;
+  }
+
+  .team-member {
+    flex-direction: column;
+    padding: var(--size-spacing);
+  }
+
+  .team-member img {
+    width: 50%;
+    height: auto;
+    margin: 0.625rem;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+
+  .text-container h2 {
+    font-size: var(--size-spacing);
+  }
+
+  .text-container p {
+    line-height: var(--size-spacing);
+    font-size: 0.9rem;
+  }
+  .team-member.left p {
+    flex-direction: row;
+    text-align: right;
+  }
+
+  .team-member.right p {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+}

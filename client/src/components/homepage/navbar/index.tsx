@@ -1,28 +1,78 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./index.css";
 
 export function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header>
+    <header id="haut">
       <nav>
-        <ul className="link">
+        <button
+          className={`burger ${isMenuOpen ? "active" : ""}`}
+          onClick={toggleMenu}
+          type="button"
+        >
+          <button
+            className={`line ${isMenuOpen ? "active" : ""}`}
+            type="button"
+          />
+          <button
+            className={`line ${isMenuOpen ? "active" : ""}`}
+            type="button"
+          />
+          <button
+            className={`line ${isMenuOpen ? "active" : ""}`}
+            type="button"
+          />
+        </button>
+        <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          <h1>Smash Cards</h1>
+        </Link>
+        <ul className={`link ${isMenuOpen ? "active" : ""}`}>
           <li>
-            <Link to="/">
-              <img src="./public/logo-smash.png" alt="accueil" />
-            </Link>
+            <NavLink
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              <img src="/logo-smash.png" alt="Accueil" />
+            </NavLink>
           </li>
           <li>
-            <Link to="/scorepage">Score</Link>
+            <NavLink
+              to="/scorepage"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Score
+            </NavLink>
           </li>
           <li>
-            <Link to="/description">Description</Link>
+            <NavLink
+              to="/description"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              Description
+            </NavLink>
           </li>
           <li>
-            <Link to="/About">About</Link>
+            <NavLink
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              About
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <h1>Smash Cards</h1>
     </header>
   );
 }

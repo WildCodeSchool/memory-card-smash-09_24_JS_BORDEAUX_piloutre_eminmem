@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { KeyboardEvent } from "react";
 import BackCards from "../BackCard/BackCard";
 import FrontCard from "../FrontCard/FrontCard";
-import "./Card.css";
+import "../Description/description.css";
 
 interface ImageCard {
   image: string;
