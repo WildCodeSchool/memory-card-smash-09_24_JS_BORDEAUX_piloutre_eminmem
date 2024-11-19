@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./BackCards.css";
+import "../Description/description.css";
 
 interface ImageCard {
   name: string;

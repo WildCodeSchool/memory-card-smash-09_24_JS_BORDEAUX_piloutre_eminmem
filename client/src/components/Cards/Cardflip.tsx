@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { KeyboardEvent } from "react";
 import BackCards from "../BackCard/BackCard";
 import FrontCard from "../FrontCard/FrontCard";
-import "./Card.css";
+import "../Description/description.css";
 
 interface ImageCard {
   image: string;
@@ -16,7 +16,7 @@ export default function FlipCard() {
   const [imageCard, setImageCard] = useState<ImageCard[]>([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}api/smashArray`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/smashArray`)
       .then((response) => response.json())
       .then((data) =>
         setImageCard(

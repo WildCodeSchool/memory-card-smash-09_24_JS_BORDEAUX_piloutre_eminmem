@@ -1,11 +1,11 @@
 .rules {
   padding: 3rem;
-  text-align: center;
 }
 
 .listrules {
   display: block;
   justify-content: center;
+  text-align: left;
   width: 38%;
   margin: auto;
   line-height: 1.5rem;
@@ -35,4 +35,5 @@ button {
   cursor: pointer;
   transition: 0.7s ease;
   margin: 1rem;
+  letter-spacing: 0;
 }

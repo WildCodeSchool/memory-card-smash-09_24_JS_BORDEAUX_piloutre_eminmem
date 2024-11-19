@@ -1,7 +1,8 @@
 :root {
   --size-spacing: 1.25rem;
   --white-color: #f3efef;
-  --black-color: #0f0e0e;
+  --black-color: #0e0e0e;
+  --font-primary-text: "Barlow", Courier, monospace;
 }
 
 * {
@@ -13,7 +14,7 @@
 
 main {
   margin: var(--size-spacing);
-  font-family: "Barlow", Courier, monospace;
+  font-family: var(--font-primary-text);
 }
 img {
   height: 3.75rem;
@@ -47,7 +48,7 @@ img {
   width: 21rem;
   height: 8.125rem;
   border-radius: 0.625rem;
-  box-shadow: 2px 2px 2px 2px var(--black-color);
+  box-shadow: 2px 2px 2px 2px #0e0e0e;
   margin: 0 var(--size-spacing);
 }
 

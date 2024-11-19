@@ -16,7 +16,7 @@ const teamMembers = [
       first: "Marwane",
       last: "Ben Khalifa",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+        "Belle contribution à la dynamique de groupe, toujours impliquée dans l'amélioration des fonctionnalités et avec une grande flexibilité pour toucher à différentes parties du projet.",
     },
     linkedin: "mettre lien lkdin",
     picture: {
@@ -29,7 +29,7 @@ const teamMembers = [
       first: "Pierre",
       last: "De Castelbajac",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+        "Une forte implication technique et une volonté de résoudre les défis rencontrés, tout en contribuant à maintenir une ambiance positive dans l’équipe.",
     },
     linkedin: "lien Lkdin",
     picture: {
@@ -42,7 +42,7 @@ const teamMembers = [
       first: "Thomas",
       last: "Lemallier",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+        "Projet stimulant où chacun a pu explorer différentes facettes du développement, avec une excellente synergie d’équipe et une bonne ambiance tout au long du processus.",
     },
     linkedin: "lien Lkdin",
     picture: {
@@ -55,7 +55,7 @@ const teamMembers = [
       first: "Nicolas",
       last: "Chiche",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt est quas aspernatur id voluptas nesciunt ullam suscipit repellendus eius. Quisquam voluptatem repellendus quasi quos rem sint illo modi natus.",
+        "Engagement solide avec une participation active sur tous les aspects du projet, montrant une réelle polyvalence et un bon esprit d’équipe.",
     },
     linkedin: "lien Lkdin",
     picture: {
