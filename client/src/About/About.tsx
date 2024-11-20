@@ -50,7 +50,9 @@ export default function About() {
                 <h2>
                   {member.name.first} {member.name.last}
                 </h2>
-                <p>Profil LinkedIn :</p>
+                <a className="linkedin" href={member.linkedin} target="blank">
+                  🔎 Linkedin
+                </a>
                 <p>{member.name.paragraph}</p>
               </section>
             </article>

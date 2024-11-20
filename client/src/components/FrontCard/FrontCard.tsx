@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./FrontCard.css";
 
 interface ImageCard {
@@ -12,12 +11,10 @@ interface FrontCardProps {
 }
 
 export default function FrontCard({ initialCards }: FrontCardProps) {
-  const [imageCard] = useState<ImageCard[]>(initialCards);
-
   return (
     <main className="gridcard">
-      {imageCard.length > 0 ? (
-        imageCard.map((char) => (
+      {initialCards.length > 0 ? (
+        initialCards.map((char) => (
           <figure className="card" key={char.order}>
             <img
               src={`${import.meta.env.VITE_API_URL}${char.image}`}

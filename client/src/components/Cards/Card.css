@@ -1,7 +1,6 @@
 .gridcard {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
 }
 figcaption {
@@ -29,10 +28,7 @@ figcaption {
 }
 .card p {
   font-size: 1.4rem;
-}
-.rotated {
-  transform: rotate(180deg);
-  transition: transform 0.5s ease-in-out;
+  text-align: left;
 }
 figcaption {
   padding-top: 1.5rem;
@@ -47,7 +43,7 @@ figcaption {
   box-shadow: inset 2px 2px 20px 4px #000000;
   border-radius: inherit;
 }
-.carte.open {
+/* .carte.open {
   border: solid 2px #f30404;
   background: #0f6299;
   cursor: default;
@@ -59,7 +55,7 @@ figcaption {
 .carte.unmatched {
   background: #d015b4;
   cursor: default;
-}
+} */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .gridcard {

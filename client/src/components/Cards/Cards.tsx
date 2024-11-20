@@ -10,9 +10,10 @@ interface ImageCard {
 export default function SmashCards() {
   const [imageCard, setImageCard] = useState<ImageCard[]>([]);
 
-  const duplicate = cloneElement(
-    <main className="gridcard">
-      {imageCard.length > 0 ? (
+  const duplicate = (
+    <>
+      {" "}
+      {imageCard.length > 0 &&
         imageCard.map((char) => (
           <figure className="card" key={char.order}>
             <img
@@ -21,11 +22,8 @@ export default function SmashCards() {
             />
             <figcaption>{char.name}</figcaption>
           </figure>
-        ))
-      ) : (
-        <p>Chargement des membres de l'équipe...</p>
-      )}
-    </main>,
+        ))}
+    </>
   );
 
   useEffect(() => {
