@@ -35,10 +35,6 @@ header {
   background-color: var(--primary-color);
 }
 
-nav {
-  padding-top: 1rem;
-}
-
 a {
   text-decoration: none;
   color: var(--colortext);
@@ -63,7 +59,7 @@ h1 {
   text-align: center;
   padding-bottom: 1rem;
   letter-spacing: var(--letter-spacing);
-  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 h2 {
   text-align: center;

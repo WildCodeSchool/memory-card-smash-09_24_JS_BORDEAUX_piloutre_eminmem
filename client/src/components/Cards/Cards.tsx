@@ -1,5 +1,4 @@
 import { cloneElement, useEffect, useState } from "react";
-import "./Card.css";
 
 interface ImageCard {
   image: string;

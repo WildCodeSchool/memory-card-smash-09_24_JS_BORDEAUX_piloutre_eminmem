@@ -8,6 +8,8 @@
   margin: 3rem;
   opacity: 1;
   cursor: pointer;
+  margin: auto;
+  margin-top: 5rem;
 }
 .card:hover {
   filter: brightness(87%);
@@ -19,6 +21,60 @@
 }
 .card p {
   font-size: 1.4rem;
+}
+
+.container-modal {
+  display: flex;
+}
+
+.modal {
+  width: 40rem;
+  padding: 1rem;
+  border-radius: 17px;
+  font-size: 1.6rem;
+  height: 60rem;
+  text-align: center;
+  opacity: 1;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.43);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(18.6px);
+  -webkit-backdrop-filter: blur(18.6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal img {
+  margin: 2rem;
+  height: 15rem;
+  width: 15rem;
+}
+
+.title-modale {
+  font-size: 3.5rem;
+  margin: 1.5rem;
+  scroll-behavior: inherit;
+}
+
+.modal p {
+  width: 20rem;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+}
+
+.modal button {
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+  border-radius: 2rem;
 }
 
 .rotated {

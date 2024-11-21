@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import type { KeyboardEvent } from "react";
-import BackCards from "../BackCard/BackCard";
-import FrontCard from "../FrontCard/FrontCard";
+import Modal from "react-accessible-modals";
 import "../Description/description.css";
+import "../FrontCard/FrontCard.css";
 
 interface ImageCard {
   image: string;
@@ -14,35 +14,39 @@ interface ImageCard {
 
 export default function FlipCard() {
   const [imageCard, setImageCard] = useState<ImageCard[]>([]);
+  const [selectedCard, setSelectCard] = useState<ImageCard | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/smashArray`)
       .then((response) => response.json())
-      .then((data) =>
-        setImageCard(
-          data.map((card: Omit<ImageCard, "isRotated">) => ({
-            ...card,
-            isRotated: false,
-          })),
-        ),
-      )
+      .then((data) => setImageCard(data))
       .catch((error) =>
         console.error("Erreur lors de la récupération des données :", error),
       );
   }, []);
 
-  const handleCardClick = (order: string) => {
-    setImageCard((prevCards) =>
-      prevCards.map((card) =>
-        card.order === order ? { ...card, isRotated: !card.isRotated } : card,
-      ),
-    );
+  useEffect(() => {
+    document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+  }, [isModalOpen]);
+
+  const openModal = (card: ImageCard) => {
+    setSelectCard(card);
+    setIsModalOpen(true);
   };
 
-  const handleKeyPress = (event: KeyboardEvent<HTMLElement>, order: string) => {
+  const closeModal = () => {
+    setSelectCard(null);
+    setIsModalOpen(false);
+  };
+
+  const handleKeyPress = (
+    event: KeyboardEvent<HTMLElement>,
+    card: ImageCard,
+  ) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
-      handleCardClick(order);
+      openModal(card);
     }
   };
 
@@ -51,17 +55,31 @@ export default function FlipCard() {
       {imageCard.map((card) => (
         <article
           key={card.order}
-          className={`${card.isRotated ? "flipped" : ""}`}
-          onClick={() => handleCardClick(card.order)}
-          onKeyUp={(event) => handleKeyPress(event, card.order)}
+          className="card"
+          onClick={() => openModal(card)}
+          onKeyUp={(event) => handleKeyPress(event, card)}
         >
-          {card.isRotated ? (
-            <BackCards initialCards={[card]} />
-          ) : (
-            <FrontCard initialCards={[card]} />
-          )}
+          <img src={`${import.meta.env.VITE_API_URL}${card.image}`} alt="" />
+          <figcaption>{card.name}</figcaption>
         </article>
       ))}
+      {isModalOpen && selectedCard && (
+        <section className="container-modal">
+          <Modal
+            className="modal"
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            modalTitle={selectedCard.name}
+          >
+            <h2 tabIndex={-1}>{selectedCard.name}</h2>
+            <img
+              src={`${import.meta.env.VITE_API_URL}${selectedCard.image}`}
+              alt=""
+            />
+            <p>{selectedCard.description}</p>
+          </Modal>
+        </section>
+      )}
     </div>
   );
 }
