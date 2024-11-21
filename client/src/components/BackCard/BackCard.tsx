@@ -15,7 +15,7 @@ export default function BackCards({ initialCards }: BackCardsProps) {
   const [imageCard] = useState<ImageCard[]>(initialCards);
 
   return (
-    <main>
+    <main className="gridCard">
       {imageCard.length > 0 ? (
         imageCard.map((char) => (
           <section className="card" key={char.order}>

@@ -18,7 +18,7 @@ const teamMembers = [
       paragraph:
         "Belle contribution à la dynamique de groupe, toujours impliquée dans l'amélioration des fonctionnalités et avec une grande flexibilité pour toucher à différentes parties du projet.",
     },
-    linkedin: "mettre lien lkdin",
+    linkedin: "https://www.linkedin.com/in/marwane-ben-khalifa-283413335/",
     picture: {
       medium: "/assets/images/Marwane.png",
     },
@@ -31,7 +31,7 @@ const teamMembers = [
       paragraph:
         "Une forte implication technique et une volonté de résoudre les défis rencontrés, tout en contribuant à maintenir une ambiance positive dans l’équipe.",
     },
-    linkedin: "lien Lkdin",
+    linkedin: "https://www.linkedin.com/in/pierre-de-castelbajac/",
     picture: {
       medium: "/assets/images/Pierre.png",
     },
@@ -44,7 +44,7 @@ const teamMembers = [
       paragraph:
         "Projet stimulant où chacun a pu explorer différentes facettes du développement, avec une excellente synergie d’équipe et une bonne ambiance tout au long du processus.",
     },
-    linkedin: "lien Lkdin",
+    linkedin: "https://www.linkedin.com/in/thomaslemallier/",
     picture: {
       medium: "/assets/images/Thomas.png",
     },
@@ -57,7 +57,7 @@ const teamMembers = [
       paragraph:
         "Engagement solide avec une participation active sur tous les aspects du projet, montrant une réelle polyvalence et un bon esprit d’équipe.",
     },
-    linkedin: "lien Lkdin",
+    linkedin: "https://www.linkedin.com/in/nicolas-chiche-79903b2b0/",
     picture: {
       medium: "/assets/images/Nico.png",
     },

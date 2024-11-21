@@ -18,7 +18,7 @@ export default function FlipCard() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/smashArray`)
+    fetch(`${import.meta.env.VITE_API_URL}api/smashArray`)
       .then((response) => response.json())
       .then((data) => setImageCard(data))
       .catch((error) =>

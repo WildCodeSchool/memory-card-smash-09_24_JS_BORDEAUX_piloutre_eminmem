@@ -1,13 +1,5 @@
-import SmashCards from "../Cards/Cards";
-import { Footer } from "../homepage/footer";
-import { NavBar } from "../homepage/navbar";
+import MemoryGame from "./Game";
 
 export default function GamePage() {
-  return (
-    <>
-      <NavBar />
-      <SmashCards />
-      <Footer />;
-    </>
-  );
+  return <MemoryGame />;
 }
