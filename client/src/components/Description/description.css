@@ -2,11 +2,12 @@
   --primary-color: #e60013;
   --second-color: #0e0e0e;
   --colortext: #f3e7e7;
+  --font-title: "Bangers", Courier, monospace;
 }
 
 @media (prefers-reduced-motion: reduce) {
   button,
-  .falsebutton .burger .line {
+  .burger .line {
     animation: none;
     transition: none;
   }
@@ -14,8 +15,21 @@
 
 .gridcard {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  margin: auto;
+  gap: 6rem;
+}
+
+figcaption {
+  font-family: var(--font-title);
+}
+
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centre dans les deux dimensions */
 }
 
 .card {

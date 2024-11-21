@@ -2,12 +2,14 @@
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  align-items: center;
 }
 
-img {
+
+
+nav img {
   height: 8.12rem;
   width: 8.12rem;
+  position: relative;
 }
 
 .burger {

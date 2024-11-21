@@ -34,16 +34,14 @@ export function NavBar() {
         <Link to="/" onClick={() => setIsMenuOpen(false)}>
           <h1>Smash Cards</h1>
         </Link>
+        <NavLink
+          to="/"
+          onClick={() => setIsMenuOpen(false)}
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          <img src="/logo-smash.png" alt="Accueil" />
+        </NavLink>
         <ul className={`link ${isMenuOpen ? "active" : ""}`}>
-          <li>
-            <NavLink
-              to="/"
-              onClick={() => setIsMenuOpen(false)}
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              <img src="/logo-smash.png" alt="Accueil" />
-            </NavLink>
-          </li>
           <li>
             <NavLink
               to="/scorepage"
