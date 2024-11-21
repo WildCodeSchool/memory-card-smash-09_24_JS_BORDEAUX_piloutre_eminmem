@@ -1,7 +1,5 @@
 import "./About.css";
 import { useEffect, useState } from "react";
-import { Footer } from "../components/homepage/footer";
-import { NavBar } from "../components/homepage/navbar";
 
 type TeamMember = {
   name: {
@@ -29,39 +27,35 @@ export default function About() {
   }, []);
 
   return (
-    <>
-      <NavBar />
-      <main>
-        {teamMembers.length > 0 ? (
-          teamMembers.map((member, i) => (
-            <article
-              key={member.id}
-              className={`team-member ${i % 2 === 0 ? "left" : "right"}`}
-            >
-              <img
-                src={
-                  member.picture.medium.startsWith("http")
-                    ? member.picture.medium
-                    : `${import.meta.env.VITE_API_URL}${member.picture.medium}`
-                }
-                alt={`${member.name.first} ${member.name.last}`}
-              />
-              <section className="text-container">
-                <h2>
-                  {member.name.first} {member.name.last}
-                </h2>
-                <a className="linkedin" href={member.linkedin} target="blank">
-                  🔎 Linkedin
-                </a>
-                <p>{member.name.paragraph}</p>
-              </section>
-            </article>
-          ))
-        ) : (
-          <p>Chargement des membres de l'équipe...</p>
-        )}
-      </main>
-      <Footer />
-    </>
+    <main>
+      {teamMembers.length > 0 ? (
+        teamMembers.map((member, i) => (
+          <article
+            key={member.id}
+            className={`team-member ${i % 2 === 0 ? "left" : "right"}`}
+          >
+            <img
+              src={
+                member.picture.medium.startsWith("http")
+                  ? member.picture.medium
+                  : `${import.meta.env.VITE_API_URL}${member.picture.medium}`
+              }
+              alt={`${member.name.first} ${member.name.last}`}
+            />
+            <section className="text-container">
+              <h2>
+                {member.name.first} {member.name.last}
+              </h2>
+              <a className="linkedin" href={member.linkedin} target="blank">
+                🔎 Linkedin
+              </a>
+              <p>{member.name.paragraph}</p>
+            </section>
+          </article>
+        ))
+      ) : (
+        <p>Chargement des membres de l'équipe...</p>
+      )}
+    </main>
   );
 }

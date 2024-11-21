@@ -1,11 +1,5 @@
-import { Footer } from "../homepage/footer";
-import { NavBar } from "../homepage/navbar";
+import MemoryGame from "./Game";
 
 export default function GamePage() {
-  return (
-    <>
-      <NavBar />
-      <Footer />;
-    </>
-  );
+  return <MemoryGame />;
 }
