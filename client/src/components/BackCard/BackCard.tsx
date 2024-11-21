@@ -1,4 +1,4 @@
-import { useState } from "react";
+/* import { useState } from "react";
 import "./BackCards.css";
 
 interface ImageCard {
@@ -28,4 +28,4 @@ export default function BackCards({ initialCards }: BackCardsProps) {
       )}
     </main>
   );
-}
+} */

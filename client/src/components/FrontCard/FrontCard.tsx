@@ -1,4 +1,5 @@
 import "./FrontCard.css";
+import "../Description/description.css";
 
 interface ImageCard {
   image: string;

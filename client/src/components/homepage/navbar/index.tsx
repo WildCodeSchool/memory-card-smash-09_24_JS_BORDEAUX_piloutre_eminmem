@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./index.css";
 
 export function NavBar() {
@@ -10,7 +11,7 @@ export function NavBar() {
   };
 
   return (
-    <header>
+    <header id="haut">
       <nav>
         <button
           className={`burger ${isMenuOpen ? "active" : ""}`}
@@ -33,26 +34,40 @@ export function NavBar() {
         <Link to="/" onClick={() => setIsMenuOpen(false)}>
           <h1>Smash Cards</h1>
         </Link>
+        <NavLink
+          to="/"
+          onClick={() => setIsMenuOpen(false)}
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          <img src="/logo-smash.png" alt="Accueil" />
+        </NavLink>
         <ul className={`link ${isMenuOpen ? "active" : ""}`}>
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              <img src="/logo-smash.png" alt="Accueil" />
-            </Link>
-          </li>
-          <li>
-            <Link to="/scorepage" onClick={() => setIsMenuOpen(false)}>
+            <NavLink
+              to="/scorepage"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Score
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/description" onClick={() => setIsMenuOpen(false)}>
+            <NavLink
+              to="/description"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Description
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+            <NavLink
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               About
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

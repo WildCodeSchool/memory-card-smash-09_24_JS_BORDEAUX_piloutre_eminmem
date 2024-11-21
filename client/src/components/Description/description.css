@@ -1,0 +1,83 @@
+:root {
+  --primary-color: #e60013;
+  --second-color: #0e0e0e;
+  --colortext: #f3e7e7;
+  --font-title: "Bangers", Courier, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button,
+  .burger .line {
+    animation: none;
+    transition: none;
+  }
+}
+
+.gridcard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 90%;
+  margin: auto;
+  gap: 6rem;
+}
+
+figcaption {
+  font-family: var(--font-title);
+}
+
+.custom-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centre dans les deux dimensions */
+}
+
+.card {
+  background-color: var(--colortext);
+  color: var(--second-color);
+  border: solid 2px #0e0e0e;
+  box-shadow: -9px -1px 0px 1px #636262;
+}
+
+.card img {
+  background-color: var(--color-shadow);
+  box-shadow: inset 2px 2px 20px 4px #636262;
+  width: 15rem;
+  height: 18rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .gridcard {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 1.25rem;
+  }
+
+  .card img {
+    width: 10rem;
+    height: 12rem;
+  }
+
+  .card {
+    width: 15rem;
+    height: 20rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gridcard {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  .card img {
+    width: 10rem;
+    height: 12rem;
+  }
+
+  .card {
+    width: 15rem;
+    height: 20rem;
+  }
+}
