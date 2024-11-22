@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Game.css";
+import GameCard from "./GameCard";
 
-type Card = {
+export type Card = {
   image: string;
   name: string;
   order: string;
@@ -68,12 +69,7 @@ export default function MemoryGame() {
     <main className="gridcardGame">
       {cards.length > 0 ? (
         cards.map((char, index) => (
-          <figure className="gameCards" key={`${char.order}-${index}`}>
-            <img
-              src={`${import.meta.env.VITE_API_URL}${char.image}`}
-              alt={char.name}
-            />
-          </figure>
+          <GameCard key={`${char.order}-${index}`} index={index} char={char} />
         ))
       ) : (
         <p>No cards available</p>

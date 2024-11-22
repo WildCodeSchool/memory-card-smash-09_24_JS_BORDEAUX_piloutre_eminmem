@@ -29,7 +29,8 @@ figcaption {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centre dans les deux dimensions */
+  transform: translate(-50%, -50%);
+  /* Centre dans les deux dimensions */
 }
 
 .card {
@@ -44,6 +45,7 @@ figcaption {
   box-shadow: inset 2px 2px 20px 4px #636262;
   width: 15rem;
   height: 18rem;
+  object-fit: contain;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
