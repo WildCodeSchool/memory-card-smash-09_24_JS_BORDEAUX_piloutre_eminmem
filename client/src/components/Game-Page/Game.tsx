@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Game.css";
 import GameCard from "./GameCard";
+import { getCards } from "./logic";
 
 export type Card = {
   image: string;
@@ -12,39 +13,6 @@ const DIFFICULTY = 18;
 
 export default function MemoryGame() {
   const [cards, setCards] = useState<Card[]>([]);
-
-  function getRandomCharacterIndex(array: Card[]): number {
-    return Math.floor(Math.random() * array.length);
-  }
-
-  function getRandomIndex(array: Card[], pairCount: number): number[] {
-    const indexes = new Set<number>();
-
-    while (indexes.size < pairCount) {
-      indexes.add(getRandomCharacterIndex(array));
-    }
-
-    return Array.from(indexes);
-  }
-
-  function getRandomItems(array: Card[], indexes: number[]): Card[] {
-    const result = indexes.map((index) => array[index]);
-    return [...result, ...result];
-  }
-
-  function shuffle(array: Card[]) {
-    return array
-      .map((item) => ({ index: Math.random(), value: item }))
-      .sort((a, b) => a.index - b.index)
-      .map((item) => item.value);
-  }
-
-  function getCards(array: Card[], totalCards: number): Card[] {
-    const pairCount = totalCards / 2;
-    const randomIndexes = getRandomIndex(array, pairCount);
-    const randomItems = getRandomItems(array, randomIndexes);
-    return shuffle(randomItems);
-  }
 
   function loadImages() {
     fetch(`${import.meta.env.VITE_API_URL}api/smashArray`)
