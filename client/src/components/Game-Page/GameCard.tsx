@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Card } from "./Game";
+import type { Card } from "./Game";
 
 interface GameCardProps {
   index: number;
@@ -9,8 +9,7 @@ interface GameCardProps {
 export default function GameCard({ index, char }: GameCardProps) {
   const [isCardFlipped, setIsCardFlipped] = useState<boolean>(false);
 
-  function flipCard(index: number) {
-    console.log(index);
+  function flipCard() {
     setIsCardFlipped(!isCardFlipped);
   }
   return (
@@ -18,11 +17,13 @@ export default function GameCard({ index, char }: GameCardProps) {
       <img
         src={`${import.meta.env.VITE_API_URL}${char.image}`}
         alt={char.name}
-        onClick={() => flipCard(index)}
+        onClick={() => flipCard()}
+        onKeyUp={() => flipCard()}
       />
       {isCardFlipped ? (
         <img
-          onClick={() => flipCard(index)}
+          onClick={() => flipCard()}
+          onKeyUp={() => flipCard()}
           className="background-card-flipped"
           src="/logo-smash.png"
           alt="Dos de l'image omg"
