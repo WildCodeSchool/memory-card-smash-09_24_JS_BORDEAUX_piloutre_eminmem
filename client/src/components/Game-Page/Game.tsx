@@ -1,22 +1,34 @@
 import { useEffect, useState } from "react";
-import FrontCard from "../FrontCard/FrontCard";
+import "./Game.css";
 
 type Card = {
   image: string;
   name: string;
   order: string;
 };
-const DIFFICULTY = 10;
+
+const DIFFICULTY = 18;
+
 export default function MemoryGame() {
   const [cards, setCards] = useState<Card[]>([]);
 
   function getRandomCharacterIndex(array: Card[]): number {
     return Math.floor(Math.random() * array.length);
   }
-  function getCards(array: Card[], difficulty: number): Card[] {
-    const randomIndex = getRandomIndex(array, difficulty);
-    const randomItems = getRandomItems(array, randomIndex);
-    return shuffle(randomItems);
+
+  function getRandomIndex(array: Card[], pairCount: number): number[] {
+    const indexes = new Set<number>();
+
+    while (indexes.size < pairCount) {
+      indexes.add(getRandomCharacterIndex(array));
+    }
+
+    return Array.from(indexes);
+  }
+
+  function getRandomItems(array: Card[], indexes: number[]): Card[] {
+    const result = indexes.map((index) => array[index]);
+    return [...result, ...result];
   }
 
   function shuffle(array: Card[]) {
@@ -26,21 +38,13 @@ export default function MemoryGame() {
       .map((item) => item.value);
   }
 
-  function getRandomIndex(array: Card[], size: number): number[] {
-    const indexes = new Set<number>();
-
-    while (indexes.size !== size) {
-      indexes.add(getRandomCharacterIndex(array));
-    }
-
-    return Array.from(indexes);
+  function getCards(array: Card[], totalCards: number): Card[] {
+    const pairCount = totalCards / 2;
+    const randomIndexes = getRandomIndex(array, pairCount);
+    const randomItems = getRandomItems(array, randomIndexes);
+    return shuffle(randomItems);
   }
-  function getRandomItems(array: Card[], index: number[]): Card[] {
-    const result = array.filter((item) =>
-      index.includes(Number.parseInt(item.order, 10)),
-    );
-    return [...result, ...result];
-  }
+
   function loadImages() {
     fetch(`${import.meta.env.VITE_API_URL}api/smashArray`)
       .then((response) => {
@@ -60,5 +64,20 @@ export default function MemoryGame() {
     loadImages();
   }, []);
 
-  return <FrontCard initialCards={cards} />;
+  return (
+    <main className="gridcardGame">
+      {cards.length > 0 ? (
+        cards.map((char, index) => (
+          <figure className="gameCards" key={`${char.order}-${index}`}>
+            <img
+              src={`${import.meta.env.VITE_API_URL}${char.image}`}
+              alt={char.name}
+            />
+          </figure>
+        ))
+      ) : (
+        <p>No cards available</p>
+      )}
+    </main>
+  );
 }
