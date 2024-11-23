@@ -11,6 +11,7 @@ import App from "./App";
 import Description from "./components/Description/description";
 import GamePage from "./components/Game-Page/Game-Page";
 import { HomePage } from "./components/homepage/homepage";
+import { gameCardsLoader } from "./loader/game-cards-loader";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/GamePage",
         element: <GamePage />,
+        loader: gameCardsLoader,
       },
       {
         path: "/About",
