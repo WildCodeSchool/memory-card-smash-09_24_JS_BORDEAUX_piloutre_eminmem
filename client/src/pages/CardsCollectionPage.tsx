@@ -1,3 +1,1 @@
-export default function CardsCollectionPage() {
-
-}
+export default function CardsCollectionPage() {}
