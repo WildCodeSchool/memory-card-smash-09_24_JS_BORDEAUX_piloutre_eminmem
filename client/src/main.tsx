@@ -5,12 +5,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import ListCardsPage from "./list-cards/ListCardsPage";
-import { ListCardsLoader } from "./list-cards/list-card-loader";
 
 const router = createBrowserRouter([
   {
     element: <App />,
-    children: [{ path: "/", element: <ListCardsPage />, loader: ListCardsLoader }],
+    children: [{ path: "/", element: <ListCardsPage />, loader: }],
   },
 ]);
 
