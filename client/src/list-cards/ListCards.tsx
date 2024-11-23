@@ -1,7 +1,10 @@
-export default function ListCards() {
+import CardDetails from "./Card";
+import type { Card } from "./card.type";
+
+export default function ListCards({ cards }: { cards: Card[] }) {
   return (
-    <div>
-      <h1>List Cards</h1>
-    </div>
+    cards.map((card, index) => (
+      <CardDetails key={index} card={card} />
+    ))
   );
 }
